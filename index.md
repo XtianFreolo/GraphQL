@@ -156,7 +156,92 @@ query MyQuery {
 
 
 
+COMPLEX TASK
 
+Full Char profile
+lets use palpatine 
+
+
+{
+  person(id: "cGVvcGxlOjIx") {
+    name
+    homeworld {
+      name
+    }
+    filmConnection {
+      films {
+        title
+      }
+    }
+    starshipConnection {
+      starships {
+        name
+        model
+      }
+    }
+  }
+}
+
+NABOOOO!!
+
+Link first 5 char with their planets:
+
+query myQuery {
+  allPeople(first: 5) {
+    people {
+      name
+      homeworld {
+        name 
+        population
+      }
+    }
+  }
+}
+
+Vehicles, Their Pilots, and Pilots' Species:
+
+query MyQuery {
+  allVehicles(last: 3) {
+    vehicles {
+      name
+      model
+      pilotConnection {
+        pilots {
+          name
+          id
+          species {
+            id
+          }
+        }
+      }
+    }
+  }
+}
+
+First 3 movies, list related char, planet and starships. 
+
+query MyQuery {
+  allFilms(first: 3) {
+    films {
+      title
+      characterConnection {
+        characters {
+          name
+        }
+      }
+      planetConnection {
+        planets {
+          name
+        }
+      }
+      starshipConnection{
+        starships {
+          name
+        }
+      }
+    }
+  }
+}
 
 
 
