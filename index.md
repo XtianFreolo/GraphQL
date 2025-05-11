@@ -50,3 +50,57 @@ query myQuery {
   }
 }
 
+
+INTERMEDIET TASK
+
+list the first 5 characters and the starshipsnthey piloted:
+
+query myQuery {
+  allPeople(first: 5) {
+    people {
+      name 
+      starshipConnection{
+        starships{
+          name
+          model
+        }
+      }
+    }
+  }
+}
+
+
+5 species and their language:
+
+query MyQuery {
+  allSpecies(first: 5) {
+    species {
+      name
+      language
+    }
+  }
+}
+
+planets and their climates:
+
+query myQuery {
+  allPlanets(first: 5) {
+    planets {
+      name
+      climates
+    }
+  }
+}
+
+vehicles and their cost: 
+
+query myQuery {
+  allVehicles(last: 3) {
+    vehicles {
+      name
+      costInCredits
+    }
+  }
+}
+
+
