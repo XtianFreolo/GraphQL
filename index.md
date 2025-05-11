@@ -103,4 +103,72 @@ query myQuery {
   }
 }
 
+ADVANCED TASK
+
+All characters in specific film:
+
+query myQuery {
+  allFilms(first: 1) {
+    films {
+      characterConnection {
+        totalCount
+        characters {
+          name
+        }
+      }
+    }
+  }
+}
+
+
+Character that has more than one film: 
+lets use palpatine
+
+query myQuery {
+  person(id: "cGVvcGxlOjIx") {
+    name
+    filmConnection {
+      totalCount
+      films {
+        episodeID
+      }
+    }
+  }
+}
+
+
+Aggregated film Stats:
+
+query MyQuery {
+  allFilms {
+    totalCount
+    films {
+      title
+      characterConnection {
+        totalCount
+        characters {
+          name
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
